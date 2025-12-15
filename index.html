@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site Profissional - Template Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primaria: #4f46e5;
+      --primaria-clara: #6366f1;
+      --fundo: #ffffff;
+      --texto: #111111;
+      --cinza: #f7f7f7;
+    }
+    [data-theme="dark"] {
+      --fundo: #0d0d0d;
+      --texto: #ffffff;
+      --cinza: #1a1a1a;
+      --primaria: #8b5cf6;
+      --primaria-clara: #a78bfa;
+    }
+
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',system-ui,Arial;background:var(--fundo);color:var(--texto);line-height:1.6}
+    header{background:#111;color:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+    header h1{margin:0;font-size:1.4rem}
+    nav a{color:#fff;margin-left:20px;text-decoration:none;font-weight:500}
+    nav a:hover{opacity:.8}
+
+    .toggle{background:none;border:1px solid #444;color:#fff;padding:6px 12px;border-radius:20px;cursor:pointer}
+
+    .hero{height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80') center/cover}
+    .hero h2{font-size:3rem;color:#fff;margin-bottom:10px}
+    .hero p{color:#e5e5e5;font-size:1.2rem;max-width:700px;margin:0 auto 25px}
+    .btn{background:var(--primaria);color:#fff;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block}
+    .btn:hover{background:var(--primaria-clara)}
+
+    section{padding:80px 40px}
+    .container{max-width:1200px;margin:0 auto}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+    .card{background:var(--cinza);padding:30px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.05)}
+    .card h3{margin-top:0}
+
+    .sobre{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .sobre img{width:100%;border-radius:20px}
+
+    .cta{background:linear-gradient(135deg,var(--primaria),var(--primaria-clara));color:#fff;text-align:center;padding:80px 40px}
+    .cta h2{font-size:2.5rem;margin-bottom:20px}
+
+    footer{background:#111;color:#aaa;padding:30px 40px;text-align:center}
+
+    @media(max-width:768px){
+      .hero h2{font-size:2.2rem}
+      .sobre{grid-template-columns:1fr}
+      header{flex-direction:column;gap:10px}
+    }
+  </style>
+</head>
+<body>
+  <a href="https://wa.me/5589999715191" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px 20px;border-radius:50px;font-weight:600;text-decoration:none;box-shadow:0 10px 25px rgba(0,0,0,.3);z-index:999">💬 WhatsApp</a>
+  <header>
+    <h1>Minha Marca</h1>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <button class="toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <h2>Sites Profissionais que Vendem</h2>
+        <p>Criação de sites modernos, rápidos e estratégicos para atrair clientes e aumentar suas vendas online.</p>
+        <a href="#contato" class="btn">Quero Vender Mais</a>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <h2>Serviços</h2>
+        <p>Ofereço soluções completas para você ter presença digital profissional e gerar resultados reais.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Criação de Sites Profissionais</h3>
+            <p>Sites modernos, rápidos e responsivos, focados em conversão e credibilidade.</p>
+          </div>
+          <div class="card">
+            <h3>Landing Pages de Vendas</h3>
+            <p>Páginas estratégicas para anúncios, WhatsApp e captação de clientes.</p>
+          </div>
+          <div class="card">
+            <h3>Manutenção e Suporte</h3>
+            <p>Atualizações, ajustes de conteúdo e melhorias contínuas no seu site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container sobre">
+        <div>
+          <h2>Quem Sou</h2>
+          <p>Sou especialista em criação de sites profissionais focados em vendas. Meu objetivo é ajudar empresas e profissionais a conquistarem mais clientes através da internet.</p>
+          <p>Trabalho com design moderno, estratégia e tecnologia para entregar resultados reais.</p>
+          <a href="#contato" class="btn">Solicitar Proposta</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="Trabalho profissional">
+      </div>
+    </section>
+
+    <section class="cta" id="contato">
+      <h2>Vamos criar seu site profissional?</h2>
+      <p>Atendimento rápido pelo WhatsApp. Solicite um orçamento sem compromisso.</p>
+      <a href="https://wa.me/5589999715191" class="btn">Falar no WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function toggleTheme(){
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === 'dark' ? '' : 'dark';
+    }
+  </script>
+</body>
+</html>
